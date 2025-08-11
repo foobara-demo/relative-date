@@ -25,7 +25,10 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "foobara-llm-backed-command", "< 2.0.0"
   spec.add_dependency "foobara-ollama-api", "< 2.0.0"
+  spec.add_dependency "foobara-sh-cli-connector", "< 2.0.0"
 
+  spec.bindir = "bin"
+  spec.executables = ["determine_date_test.rb", "determine-relative-date"]
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
 end

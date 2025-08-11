@@ -13,7 +13,7 @@ RSpec.describe DetermineDateRelativeToToday do
   let(:phrase) { "The Thursday after next" }
   let(:llm_model) { "qwen3-coder:30b" }
 
-  it "is successful", vcr: { record: :once } do
+  it "is successful", vcr: { record: :none } do
     expect(outcome).to be_success
 
     expect(result).to be_thursday

@@ -5,6 +5,8 @@ ruby FoobaraDemo::RelativeDate::MINIMUM_RUBY_VERSION
 
 gemspec
 
+# gem "foobara-llm-backed-command", path: "../../foobara/llm-backed-command"
+
 gem "foobara-dotenv-loader", "< 2.0.0"
 
 gem "rake"

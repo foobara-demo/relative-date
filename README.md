@@ -1,29 +1,34 @@
-# 
+# DetermineDateRelativeToToday
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library
-into a gem. Put your Ruby code in the file `lib/foobara/empty_ruby_project_generator`. To experiment with that code,
-run `bin/console` for an interactive prompt.
-
+This is just a demo repo to show using LlmBackedCommand using Ollama to solve a real problem.
 
 ## Installation
 
-Typical stuff: add `gem "foobara-demo-relative-date"` to your Gemfile or .gemspec file. Or even just
-`gem install foobara-demo-relative-date` if just playing with it directly in scripts.
+This isn't a gem or anything. You can clone this with:
+
+```
+git clone git@github.com:foobara-demo/relative-date
+cd relative-date
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Check out the example scripts in bin/ and you can run them like so:
 
-```ruby
-#!/usr/bin/env ruby
-
-require "foobara/load_dotenv"
-Foobara::LoadDotenv.run!(dir: __dir__)
-
-TODO: some example code
 ```
+$ determine_date_test.rb
+It is a Thursday
+2025-8-21
+$ determine-relative-date --phrase 'the thursday after next'
+2025-08-21
+$ determine-relative-date --phrase yesterday
+2025-08-10
+$ determine-relative-date --phrase yesterday --today 2025-01-01
+2024-12-31
+```
+
+You might need to prefix the above calls with `bin/` depending on how your local environment is set up.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub
