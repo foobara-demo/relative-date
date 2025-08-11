@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     foobara-demo-relative-date (0.0.1)
-      foobara (>= 0.0.136, < 2.0.0)
+      foobara (< 2.0.0)
+      foobara-ollama-api (< 2.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -26,16 +27,7 @@ GEM
       foobara (< 2.0.0)
       foobara-sh-cli-connector (< 2.0.0)
     ffi (1.17.2)
-    ffi (1.17.2-aarch64-linux-gnu)
-    ffi (1.17.2-aarch64-linux-musl)
-    ffi (1.17.2-arm-linux-gnu)
-    ffi (1.17.2-arm-linux-musl)
-    ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x86-linux-gnu)
-    ffi (1.17.2-x86-linux-musl)
-    ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
-    ffi (1.17.2-x86_64-linux-musl)
     foob (0.0.15)
       foobara (~> 0.0.116)
       foobara-command-generator (< 2.0.0)
@@ -61,6 +53,8 @@ GEM
       foobara-lru-cache (< 2.0.0)
       foobara-util (< 2.0.0)
       inheritable-thread-vars (< 2.0.0)
+    foobara-cached-command (1.0.0)
+      foobara (< 2.0.0)
     foobara-command-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -81,12 +75,17 @@ GEM
       foobara-files-generator (~> 0.0.1)
     foobara-files-generator (0.0.7)
       foobara (~> 0.0.116)
+    foobara-http-api-command (0.0.9)
+      foobara
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
     foobara-lru-cache (1.0.0)
     foobara-mcp-connector-generator (0.0.6)
       foobara (~> 0.0.99)
+    foobara-ollama-api (1.0.2)
+      foobara-cached-command (>= 1.0.0, < 2.0.0)
+      foobara-http-api-command (< 2.0.0)
     foobara-organization-generator (0.0.2)
       foobara
       foobara-files-generator
@@ -250,17 +249,7 @@ GEM
       hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
-  aarch64-linux-gnu
-  aarch64-linux-musl
-  arm-linux-gnu
-  arm-linux-musl
-  arm64-darwin
-  ruby
-  x86-linux-gnu
-  x86-linux-musl
-  x86_64-darwin
   x86_64-linux-gnu
-  x86_64-linux-musl
 
 DEPENDENCIES
   foob

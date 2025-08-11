@@ -21,4 +21,10 @@ end
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
 require "foobara/spec_helpers/all"
-require_relative "../boot/finish"
+
+# Change this to :once and uncomment the raise below if wanting to rerecord this cassette
+VCR.use_cassette("list_models", record: :none) do
+  require "foobara/ollama_api"
+  require_relative "../boot/finish"
+end
+# raise "Just rerecording the list_models cassette, no need to proceed"
