@@ -6,11 +6,20 @@ RSpec.describe DetermineDateRelativeToToday do
   let(:errors_hash) { outcome.errors_hash }
 
   let(:inputs) do
-    { foo: "bar" }
+    { phrase:, llm_model:, today: }
   end
 
-  it "is successful" do
+  let(:today) { Date.parse("2025-08-10") }
+  let(:phrase) { "The Thursday after next" }
+  let(:llm_model) { "qwen3-coder:30b" }
+
+  it "is successful", vcr: { record: :once } do
     expect(outcome).to be_success
-    expect(result).to eq("bar")
+
+    expect(result).to be_thursday
+
+    expect(result.year).to eq(2025)
+    expect(result.month).to eq(8)
+    expect(result.day).to eq(21)
   end
 end

@@ -1,31 +1,11 @@
-class DetermineDateRelativeToToday < Foobara::Command
-  # class SomeError < RuntimeError
-  #   class << self
-  #     def context_type_declaration
-  #       { foo: :string }
-  #     end
-  #   end
-  # end
+require "foobara/llm_backed_command"
 
-  # possible_error SomeError
-
+class DetermineDateRelativeToToday < Foobara::LlmBackedCommand
   inputs do
-    foo :string, default: "bar"
+    phrase :string, :required
+    today :date, default: -> { Date.today }
+    llm_model Foobara::Ai::AnswerBot::Types.model_enum, default: "qwen3-coder:30b"
   end
 
-  result :string
-
-  # depends_on SomeOtherCommand
-
-  def execute
-    do_something
-  end
-
-  # def validate
-  #   add_runtime_error SomeError.new(message: "kaboom", context: {foo: :bar})
-  # end
-
-  def do_something
-    foo
-  end
+  result :date, description: "The date referred to in the phrase relative to today"
 end
