@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
     "CHANGELOG.md"
   ]
 
-  spec.add_dependency "foobara", "< 2.0.0"
+  spec.add_dependency "foobara-llm-backed-command", "< 2.0.0"
   spec.add_dependency "foobara-ollama-api", "< 2.0.0"
 
   spec.require_paths = ["lib"]

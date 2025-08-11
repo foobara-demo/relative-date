@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     foobara-demo-relative-date (0.0.1)
-      foobara (< 2.0.0)
+      foobara-llm-backed-command (< 2.0.0)
       foobara-ollama-api (< 2.0.0)
 
 GEM
@@ -53,6 +53,7 @@ GEM
       foobara-lru-cache (< 2.0.0)
       foobara-util (< 2.0.0)
       inheritable-thread-vars (< 2.0.0)
+    foobara-ai (1.0.2)
     foobara-cached-command (1.0.0)
       foobara (< 2.0.0)
     foobara-command-generator (0.0.3)
@@ -77,6 +78,12 @@ GEM
       foobara (~> 0.0.116)
     foobara-http-api-command (0.0.9)
       foobara
+    foobara-json-schema-generator (1.0.1)
+      foobara (>= 0.0.136, < 2.0.0)
+    foobara-llm-backed-command (1.0.1)
+      foobara (>= 0.0.136, < 2.0.0)
+      foobara-ai (>= 1.0.0, < 2.0.0)
+      foobara-json-schema-generator (>= 1.0.0, < 2.0.0)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
